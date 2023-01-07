@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* reset */
+*{ margin: 0;padding: 0; font: inherit; color: inherit; }
+body{ line-height: 1; }
+ul{ list-style: none; }
+a{text-decoration: none;}
+img{ max-width: 100%; display: block; }
+/* //reset */
+
+header{}
+header .box1{
+  position: relative;
+  height: 200px;
+  background: #ccc;
+}
+
+header h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header h1 a{
+  width: 100px;
+  height: 50px;
+  background: #fff;
+  display: block;
+}
+
+header .sns{
+  float: left;
+}
+header .login{
+  float: right;
+}
+
+.gnb{
+  background: #888;
+  text-align: center;
+}
+.gnb ul{
+  overflow: hidden;
+  background: #f00;
+  display: inline-block;
+  vertical-align: top;
+  /* 인라인블록에서 블록없이 여백잡기 */
+  line-height: 50px;
+}
+.gnb ul li{
+  float: left;
+  padding: 0 10px;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="box1">
+      <h1><a href="">logo</a></h1>
+      <div class="sns">111</div>
+      <div class="login">222</div>
+    </div>
+    <nav class="gnb">
+      <ul>
+        <li><a href="">menu1</a></li>
+        <li><a href="">menu2</a></li>
+        <li><a href="">menu3</a></li>
+        <li><a href="">menu4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <style>
+
+    main{
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .box2{
+      padding: 10px;
+      background: #ccc;
+      margin: 10px 0;
+    }
+    .box2 .top{
+      height: 100px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    .box2 .bottom{
+      background: #fff;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .box2 .left{
+      float: left;
+      width: calc(100% - 160px);
+      /* background: #00f; */
+    }
+    .box2 .left li{
+      width: calc((100% - 20px)/3);
+      height: 100px;
+      background: #f00;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .box2 .left li:nth-child(3n){
+      margin-right: 0;
+    }
+
+    /* 이하 */
+    /* .box2 .left li:nth-child(-n+3){
+      margin-bottom: 10px;
+    } */
+        /* 이상 */
+    .box2 .left li:nth-child(n+4){
+      margin-top: 10px;
+    }
+
+    .box2 .right{
+      float: right;
+      width: 150px;
+      background: #f00;
+      height: 210px;
+    }
+  </style>
+
+  <main>
+    <section class="box2">
+      <div class="top">top</div>
+      <div class="bottom">
+        <ul class="left">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+        </ul>
+        <div class="right">right</div>
+      </div>
+    </section>
+
+
+    <style>
+
+      .box3{
+        padding: 10px;
+        background: #ccc;
+      }
+      .box3 ul{}
+      .box3 ul li{}
+      .box3 ul li+li{
+        margin-top: 10px;
+      }
+      .box3 ul a{
+        overflow: hidden;
+        display: block;
+      }
+      .box3 ul img{
+        float: left;
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+      .box3 ul p{
+        background: #fff;
+        height: 150px;
+        overflow: hidden;
+        /* flex없이 가로값안주고도 밀 수 있다 */
+      }
+
+    </style>
+
+    <section class="box3">
+      <ul>
+        <li>
+          <a href="">
+            <img src="./img2.jpg" alt="">
+            <p>Lorem, ipsum dolor.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img2.jpg" alt="">
+            <p>Lorem, ipsum dolor.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img2.jpg" alt="">
+            <p>Lorem, ipsum dolor.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img2.jpg" alt="">
+            <p>Lorem, ipsum dolor.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>footer</footer>
+</body>
+</html>

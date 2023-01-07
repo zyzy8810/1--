@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      background: #ccc;
+    }
+
+    header{
+      position: fixed;
+      top: 0;left: 0;
+      background: #000;
+      height: 100%;
+      width: 150px;
+      color: #fff;
+    }
+
+    main{
+      margin: 10px 10px 10px 160px;
+    }
+
+    main > div{
+      margin-bottom: 10px;
+    }
+
+    .box1,
+    .box3,
+    .box4,
+    .box7{
+      height: 200px;
+      background: #fff;
+    }
+
+    .box2{
+      overflow: hidden;
+    }
+    .box2 div{
+      float: left;
+      width: calc(50% - 5px);
+      height: 100px;
+      background: #fff;
+    }
+    .box2 div:last-child{
+      margin-left: 10px;
+    }
+
+    .box5{
+      overflow: hidden;
+    }
+    .box5 div{
+      float: left;
+      height: 100px;
+      background: #fff;
+      width: calc(80% - 5px);
+
+    }
+    .box5 div:last-child{
+      float: right;
+      width: calc(20% - 5px);
+    }
+
+    .box6{
+      overflow: hidden;
+    }
+    .box6 div{
+      float: left;
+      height: 100px;
+      background: #fff;
+      width: calc(30% - 5px);
+
+    }
+    .box6 div:last-child{
+      float: right;
+      width: calc(70% - 5px);
+    }
+
+  </style>
+</head>
+<body>
+  <header>header</header>
+
+  <main>
+    <div class="box1">box</div>
+    <div class="box2">
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div class="box3">box</div>
+    <div class="box4">box</div>
+    <div class="box5">
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div class="box6">
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div class="box7">box</div>
+  </main>
+
+</body>
+</html>

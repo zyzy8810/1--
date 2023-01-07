@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;padding: 0;
+    }
+    body{
+      background: #ccc;
+    }
+    header{
+      background: #000;
+      height: 100px;
+    }
+    main{
+      width: 800px;
+      margin: 10px auto;
+      /* 상 좌우 하 */
+    }
+    .box1{
+      height: 200px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    /* 1 단점: 넘치는 걸 짤라버리는 단점*/
+    .box2{
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .box2 div{
+      float: left;
+      width: calc((100% - 20px) / 3);
+      height: 100px;
+      background: #fff;
+      margin-right: 10px;
+    }
+    .box2 div:last-child{
+      margin-right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>header</header>
+  <main>
+    <div class="box1">box</div>
+    <div class="box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <style>
+      .box3{}
+      .box3 .box{float: left;
+      width: calc((100% - 40px)/5);
+    height: 100px;
+  background: #fff;
+margin-right: 10px;}
+      .box3 .box.last{
+        margin-right: 0;
+      }
+
+      .box3 .clear{
+        clear: both;
+      }
+    </style>
+<!-- 단점:귀찮음 태그를 만들어내야해서 -->
+    <div class="box3">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box last">5</div>
+  <div class="clear"></div>
+    </div>
+
+    <style>
+      .box4{
+        margin-top: 10px;
+        background: #f00;
+        padding: 10px;
+      }
+      .box4 div{
+        float: left;
+        width: calc(50% - 5px);
+        height: 100px;
+        background: #fff;
+      }
+      .box4 div:last-child{
+        margin-left: 10px;
+      }
+      .box4::after{
+        content: ''; /* 인라인 */
+        display: block;
+        clear: both;
+      }
+    </style>
+
+    <div class="box4">
+      <!-- before -->
+      <div>1</div>
+      <div>2</div>
+      <!-- after -->
+    </div>
+    13123123
+  </main>
+</body>
+
+</html>
